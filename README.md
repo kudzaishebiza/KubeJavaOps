@@ -36,7 +36,26 @@ Before starting, ensure you have the following prerequisites installed and confi
 
 ## Setting up AWS Infrastructure with Terraform
 
-1. Navigate to the project directory:
+Navigate to the project directory:
 
-   ```bash
+```bash
    cd path/to/KubeJavaOps
+   
+Initialize Terraform:
+   terraform init
+
+Apply Terraform configurations:
+   terraform apply
+
+## Building and Packaging the Java Application
+
+Build the Java application:
+
+cd java-app/
+./mvnw clean install
+This will build the Java application and create an executable JAR file.
+
+Build the Docker image:
+docker build -t my-java-app:latest .
+
+## Deploying Java Application to Kubernetes
